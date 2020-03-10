@@ -1,6 +1,8 @@
 import React from 'react';
+
 import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
+import {Jumbotron} from 'reactstrap';
 
 class App extends React.Component {
   constructor(){
@@ -60,7 +62,12 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h2>Welcome to your Todo App!</h2>
+        <Jumbotron>
+  
+          <h1 className="display-3">Welcome to your Todo App!</h1>
+   
+        </Jumbotron>
+        
 
         <TodoList toggle={this.toggleCompleted} todos={this.state.todos}/>
 
