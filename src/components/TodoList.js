@@ -5,8 +5,10 @@ class TodoList extends React.Component {
     render(){
         return (
             <div>
-                {this.props.todos.map(todo => <Todo toggle={this.props.toggle} data={todo}/>)}
-               
+                {this.props.todos
+                    .filter(
+                        todo => todo.task.toLowerCase().includes(this.props.query.toLowerCase()))
+                    .map(todo => <Todo key={todo.id} toggle={this.props.toggle} data={todo}/>)}               
             </div>
         )
     }
