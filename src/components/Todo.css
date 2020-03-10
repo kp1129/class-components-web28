@@ -4,6 +4,7 @@
     line-height: 1.5;
     font-family: 'Dancing Script', cursive;
     color: #1f1e1e;
+    text-align: center;
 }
 .completed {
     text-decoration: line-through;
