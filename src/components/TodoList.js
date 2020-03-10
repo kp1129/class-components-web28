@@ -8,7 +8,8 @@ class TodoList extends React.Component {
                 {this.props.todos
                     .filter(
                         todo => todo.task.toLowerCase().includes(this.props.query.toLowerCase()))
-                    .map(todo => <Todo key={todo.id} toggle={this.props.toggle} data={todo}/>)}               
+                    .map(todo => <Todo key={todo.id} toggle={this.props.toggle} data={todo}/>)
+                    .reverse()}               
             </div>
         )
     }

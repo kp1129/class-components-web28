@@ -1,0 +1,10 @@
+.mini-manual {
+    margin: 0.5% 0;
+    border: 0.5px dashed gray;
+    padding: 1%;
+}
+
+p {
+    line-height: 0.75;
+    color: #1f1e1e;
+}

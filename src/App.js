@@ -3,7 +3,9 @@ import React from 'react';
 import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
 import SearchForm from './components/SearchForm';
-import {Jumbotron} from 'reactstrap';
+import MiniManual from './components/MiniManual';
+
+import './App.css';
 
 class App extends React.Component {
   constructor(){
@@ -67,18 +69,23 @@ class App extends React.Component {
   // this component is going to take care of state, and any change handlers you need to work with your state
   render() {
     return (
-      <div>
-        <Jumbotron>
-  
-          <h1 className="display-3">Welcome to your Todo App!</h1>
-   
-        </Jumbotron>
-
+      <div className="app" role="main">
         <SearchForm handleSearch={this.handleSearch}/>
+    
+  
+          <h1 className="display-4">Welcome to your Todo App!</h1>
+   
+    
 
-        <TodoList query={this.state.query} toggle={this.toggleCompleted} todos={this.state.todos}/>
+        
+
+        <MiniManual />
 
         <TodoForm add={this.addTodo} clear={this.clearCompleted}/>
+       
+        <TodoList query={this.state.query} toggle={this.toggleCompleted} todos={this.state.todos}/>
+
+       
       </div>
     );
   }

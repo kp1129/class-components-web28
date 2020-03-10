@@ -1,5 +1,9 @@
-p {
+.todo {
     cursor: pointer;
+    font-size: 1.5em;
+    line-height: 1.5;
+    font-family: 'Dancing Script', cursive;
+    color: #1f1e1e;
 }
 .completed {
     text-decoration: line-through;
